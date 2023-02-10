@@ -2,10 +2,19 @@ require("bufferline").setup({
 	options = {
 		numbers = "none",
 		diagnostics = "nvim_lsp",
-		separator_style = "slant" or "padded_slant",
+		separator_style = 'thick',
 		show_tab_indicators = true,
 		show_buffer_close_icons = true,
 		show_close_icon = true,
+        close_command = "bdelete! %d",
+		offsets = {
+			{
+				filetype = "NvimTree",
+				text = "File Explorer",
+				highlight = "Directory",
+				separator = true, -- use a "true" to enable the default, or set your own character
+			},
+		},
 	},
 	highlights = {
 		fill = {
